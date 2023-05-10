@@ -7,11 +7,14 @@ const Navbar = () => {
     <nav className="">
        <div className="container mx-auto flex justify-between h-16 py-4 items-center">
            <Bars3BottomLeftIcon className='h-5 w-5' />
-        <span className='text-xl font-bold'>Blacwear.</span>
+        <span className='text-xl font-bold text-gray-900'>Blacwear.</span>
         
-        <span className="w-9 h-9 flex items-center text-white bg-black rounded-full p-1.5">
-          <ShoppingBagIcon className='h-4 w-4'/>
-            <p className='text-xs -mt-2'>0</p>
+        <span className="w-10 h-10 flex items-center hover:bg-gray-100 rounded-full p-1 cursor-pointer ">
+          <ShoppingBagIcon className='h-6 w-6 relative left-1 '/>
+            <div className=" h-4 w-4  rounded-full bg-gray-900 text-white relative right-1 bottom-1.5 z-10  " >
+              <p className='text-xs text-center'>0</p>
+            </div>
+            
         </span>
        </div>
     </nav>
