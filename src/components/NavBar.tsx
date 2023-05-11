@@ -11,7 +11,7 @@ const Navbar = () => {
         
         <span className="w-10 h-10 flex items-center hover:bg-gray-100 rounded-full p-1 cursor-pointer ">
           <ShoppingBagIcon className='h-6 w-6 relative left-1 '/>
-            <div className=" h-4 w-4  rounded-full bg-gray-900 text-white relative right-1 bottom-1.5 z-10  " >
+            <div className=" h-4 w-4  rounded-full bg-gray-900 text-white relative right-1 bottom-1.5 z-10 ">
               <p className='text-xs text-center'>0</p>
             </div>
             
