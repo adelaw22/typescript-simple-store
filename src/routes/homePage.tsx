@@ -13,9 +13,9 @@ interface ProductItemType{
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='grid gap-10 md:grid-cols-4'>
       {data.map((product:ProductItemType)=>(
-        <ProductItem key={product.id} data ={product}/>
+        <ProductItem key={product.id} productData={product}/>
       ))} 
     </div>
   )
