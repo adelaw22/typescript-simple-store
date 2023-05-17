@@ -2,13 +2,13 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import {ShoppingCartIcon} from '@heroicons/react/24/outline'
 // import ProductImg from '../assets/images/backpack.png'
-  
+
 
 const ProductItem = ({productData}:any) => {
   return (
     <div className='w-full mb-9'>
         <div className='w-full h-96 bg-gray-100 relative mb-4 cursor-pointer'>
-            <img className='w-4/5 m-auto absolute inset-0 transition duration-150 hover:scale-110 ' src={productData.img} alt="" />
+            <img className='w-4/5 m-auto absolute inset-0 transition duration-150 hover:scale-110 ' src={require(productData.img)} alt="" />
         </div>
        
             <div className='text-gray-700'>

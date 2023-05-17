@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductItem from '../components/productItem'
-import data from '../utilities/productsData.json' 
+import data from '../utilities/productsData' 
 
 interface ProductItemType{
   id: number;
