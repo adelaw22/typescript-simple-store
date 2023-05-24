@@ -17,15 +17,6 @@ export default {
       },
 
     extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            p: {
-              color: '#030712',
-            },
-          },
-        },
-      },
     },
   },
   corePlugins: {
@@ -51,7 +42,6 @@ export default {
         }
       })
     },
-    require('@tailwindcss/typography')
   ],
 }
 
