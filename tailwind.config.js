@@ -8,7 +8,7 @@ export default {
       fontSize: {
         xs: '0.65rem',
         sm: '0.8rem',
-        base: '1rem',
+        base: '0.95rem',
         xl: '1.25rem',
         '2xl': '1.563rem',
         '3xl': '1.953rem',
@@ -16,7 +16,17 @@ export default {
         '5xl': '3.052rem',
       },
 
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            p: {
+              color: '#030712',
+            },
+          },
+        },
+      },
+    },
   },
   corePlugins: {
     container: false
@@ -40,7 +50,8 @@ export default {
           },
         }
       })
-    }
+    },
+    require('@tailwindcss/typography')
   ],
 }
 
