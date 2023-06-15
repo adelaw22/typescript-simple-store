@@ -27,10 +27,10 @@ interface productData{
 const ProductData: productData[] =  [
     {
       id: 0,
-      productName: "Trunk Shorts",
+      productName: "Sansik Bag",
       price: "$2,570.39",
       description: "Dolore id nulla dolor commodo ea mollit qui. Est ex consequat occaecat sint cillum adipisicing sit veniam. Adipisicing et sint cupidatat adipisicing nisi enim voluptate velit reprehenderit est esse. Officia nulla cillum ut in culpa ex do occaecat non nisi ipsum duis consectetur.",
-      img: shorts,
+      img: bag,
       isAvailable: true,
     },
     {

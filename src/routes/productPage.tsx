@@ -4,7 +4,7 @@ import Joggers from '../assets/images/fur-coat.png'
 const ProductPage = () => {
   return (
     <div className='grid grid-cols-2 gap-8  mx-auto  '>
-      <div className='w-full h-96 bg-gray-100 relative  '>
+      <div className='w-full h-120 bg-gray-100 relative  '>
         <img className='w-2/5 m-auto absolute inset-0 transition duration-150 hover:scale-110' src={Joggers} alt=''/>
       </div>
       <div>

@@ -17,6 +17,9 @@ export default {
       },
 
     extend: {
+      height:{
+        '120': '30rem',
+      },
     },
   },
   corePlugins: {
