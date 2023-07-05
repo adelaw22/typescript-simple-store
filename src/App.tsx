@@ -3,7 +3,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from "./components/NavBar"
-import HomePage from "./routes/homePage";
+import ShopPage from "./routes/shopPage";
 import ProductPage from "./routes/productPage";
 
 
@@ -12,7 +12,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage/>,
+      element: <ShopPage/>,
     },
     {
       path: "product",
