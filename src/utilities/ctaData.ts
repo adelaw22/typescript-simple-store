@@ -9,7 +9,7 @@ interface ctaData{
     details: String;
 }
 
-const CtaCarousel: ctaData[] =[
+const CtaData: ctaData[] =[
     {
         id:0,
         img: man,
@@ -30,4 +30,4 @@ const CtaCarousel: ctaData[] =[
     },
 ]
 
-export default CtaCarousel
+export default CtaData

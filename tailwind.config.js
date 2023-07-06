@@ -26,7 +26,7 @@ export default {
     container: false
   },
   plugins: [
-    function ({ addComponents }) {
+    function ({ addComponents, addBase, theme }) {
       addComponents({
         '.container': {
           maxWidth: '90%',
@@ -43,6 +43,11 @@ export default {
             maxWidth: '1152px',
           },
         }
+      }),
+      addBase({
+        'h1': { fontSize: theme('fontSize.2xl') },
+        'h2': { fontSize: theme('fontSize.xl') },
+        'h3': { fontSize: theme('fontSize.lg') },
       })
     },
   ],
