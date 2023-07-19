@@ -9,11 +9,10 @@ const componentStyling = {
 
 
 const Navbar = () => {
-  const [NavBg, setNavBg] =useState(false)
+  const [NavBg, setNavBg] =useState<boolean>(false)
 
   const changeBg =()=>{
      if (window.scrollY >= 500){
-        console.log("hello")
         setNavBg(true)
      }else{ 
       setNavBg(false)

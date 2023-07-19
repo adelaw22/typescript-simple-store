@@ -4,9 +4,9 @@ import couple from "../assets/images/couple.png"
 
 interface ctaData{
     id: number;
-    img: String;
-    headline: String;
-    details: String;
+    img: string;
+    headline: string;
+    details: string;
 }
 
 const CtaData: ctaData[] =[

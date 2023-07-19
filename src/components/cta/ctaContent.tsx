@@ -1,19 +1,30 @@
 import React from 'react'
 
-const ctaContent =()=> {
-  return (
-    <div className=''> 
-       <div className=''>
-          <h1>Fashionable Gentleman's Attire</h1>
-          <p>Ut totam minus in illum nihil cum velit mollitia incidunt et omnis</p>
-          <button></button>
-       </div>
+interface ctaData{
+  id: number;
+  img: string;
+  headline: string;
+  details: string;
+}
 
-       <div>
-        <img src='' alt=''/>
-       </div>
-    </div>
+
+const CtaContent =(carouselData: ctaData[])=> {
+  return(  
+   carouselData.map((cta)=>(
+    <div key={cta.id}>
+      <div className=''>
+        <h1>{cta.headline}</h1>
+        <p>{cta.details}</p>
+        <button></button>
+      </div>
+
+      <div>
+        <img src={cta.img} alt=''/>
+      </div>
+
+    </div>   
+      )) 
   )
 }
 
-export default ctaContent
+export default CtaContent
