@@ -1,29 +1,25 @@
 import React from 'react'
 
-interface ctaData{
-  id: number;
-  img: string;
-  headline: string;
-  details: string;
-}
 
+const CtaContent =(ctaData: any)=> {
 
-const CtaContent =(carouselData: ctaData[])=> {
+  console.log(ctaData)
+
   return(  
-   carouselData.map((cta)=>(
-    <div key={cta.id}>
+  
+    <div key={ctaData.id}>
       <div className=''>
-        <h1>{cta.headline}</h1>
-        <p>{cta.details}</p>
+        <h1>{ctaData.headline}</h1>
+        <p>{ctaData.details}</p>
         <button></button>
       </div>
 
       <div>
-        <img src={cta.img} alt=''/>
+        <img src={ctaData.img} alt=''/>
       </div>
 
     </div>   
-      )) 
+ 
   )
 }
 

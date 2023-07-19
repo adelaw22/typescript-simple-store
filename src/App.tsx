@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
     <Navbar/>
-     <div className="container mx-auto my-12">
+     <div className="container mx-auto">
       <Outlet/>
      </div>
     </div>
