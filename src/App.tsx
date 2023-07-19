@@ -1,30 +1,14 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { Outlet } from "react-router-dom"
 import Navbar from "./components/NavBar"
-import ShopPage from "./routes/shopPage";
-import ProductPage from "./routes/productPage";
 
 
 function App() {
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <ShopPage/>,
-    },
-    {
-      path: "product",
-      element: <ProductPage/>,
-    },
-  ]);
-
+ 
   return (
     <div className="App">
     <Navbar/>
      <div className="container mx-auto my-12">
-       <RouterProvider router={router} />
+      <Outlet/>
      </div>
     </div>
   )

@@ -22,7 +22,6 @@ const ProductItem = ({productData}:any) => {
                 </div>
                 <p className='text-sm hover:text-gray-900 cursor-pointer'>{productData.price}</p>
             </div>
-       
     </div>
   )
 }

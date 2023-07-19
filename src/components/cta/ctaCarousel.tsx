@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const CtaCarousel = () => {
   return (
-    <div></div>
+    <div>
+      
+    </div>
   )
 }
 

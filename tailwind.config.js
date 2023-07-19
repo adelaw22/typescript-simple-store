@@ -20,6 +20,9 @@ export default {
       height:{
         '120': '30rem',
       },
+      width: {
+        '3/25': '12%',
+      }
     },
   },
   corePlugins: {
