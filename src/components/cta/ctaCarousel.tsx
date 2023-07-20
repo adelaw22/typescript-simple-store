@@ -14,7 +14,7 @@ interface CtaData{
 
 const CtaCarousel = () => {
   const settings: any = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

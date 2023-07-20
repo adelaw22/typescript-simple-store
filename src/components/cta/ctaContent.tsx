@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import CustomBtn from '../customBtn'
+
 
 
 const CtaContent =({ctaData}: any)=> {
@@ -10,7 +13,9 @@ const CtaContent =({ctaData}: any)=> {
               <div className='max-w-[85%]'>
                 <p className='text-xl'>{ctaData.details}</p>
                 <h1 className='text-5xl font-bold'>{ctaData.headline}</h1>
-                <button>Shop now</button>
+                <Link to='/shop'>
+                    <CustomBtn btnStyle='mt-4'>Shop now</CustomBtn>
+                </Link>
               </div>
             </div>
 

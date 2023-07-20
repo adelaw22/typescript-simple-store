@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {MagnifyingGlassIcon, ShoppingBagIcon} from '@heroicons/react/24/outline'
 
 const componentStyling = {
@@ -29,11 +29,13 @@ const Navbar = () => {
     <nav className={`z-10 top-0  ${NavBg? 'sticky bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow' : ''}`}>
        <div className="container mx-auto flex justify-between h-16 py-4 items-center">
        
-        <span className='text-3xl font-bold text-gray-900'>Blcwr.</span>
+       <Link to='/'>
+          <span className='text-3xl font-bold text-gray-900'>Blcwr.</span>
+       </Link>
         
 
         <div className="flex justify-between items-center w-3/25">
-          <NavLink to="/product" className="">
+          <NavLink to="/shop" className="">
             <span className='px-2 hover:border-b-4 hover:border-gray-900 text-gray-700 font-semibold hover:text-gray-900 hover:font-bold transition ease-in-out delay-150'>Shop</span>
           </NavLink>
           <MagnifyingGlassIcon className="h-5 w-5 stroke-gray-700 stroke-2 cursor-pointer" />

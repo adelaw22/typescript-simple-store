@@ -1,8 +1,14 @@
 import React from 'react'
 
-const customBtn = ({children}: react) => {
+interface CustomBtnProps{
+    children?: React.ReactNode;
+    btnStyle?: string;
+    rest?: any;
+}
+
+const customBtn = ({btnStyle, children, ...rest}: CustomBtnProps) => {
   return (
-    <button className='px-16 py-3 bg-neutral-900 hover:bg-neutral-700 text-neutral-50 text-base'>{children}</button>
+    <button className={`px-16 py-3 bg-neutral-900 hover:bg-neutral-700 text-neutral-50 text-base ${btnStyle}`} {...rest}>{children}</button>
   )
 }
 
