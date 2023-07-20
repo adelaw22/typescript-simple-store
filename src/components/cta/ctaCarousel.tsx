@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CtaContent from "./ctaContent";
-import data from '../../utilities/ctaData'
+import CtaData, {ctaDataType} from '../../utilities/ctaData'
 
 interface CtaData{
   id: number;
@@ -21,13 +21,12 @@ const CtaCarousel = () => {
     autoplay: true,
     autoplaySpeed: 2000
   };
-  console.log(data)
 
   return (
-    <div>
+    <div className="bg-[#E9EAEB]">
       <Slider {...settings}> 
         {
-          data.map((cta: CtaData)=>(
+          CtaData.map((cta: ctaDataType)=>(
             <CtaContent key={cta.id} ctaData={cta}/>
           ))
         }

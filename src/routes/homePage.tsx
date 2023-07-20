@@ -3,7 +3,7 @@ import CtaCarousel from '../components/cta/ctaCarousel'
 
 const HomePage =()=> {
   return (
-    <div>
+    <div className=''>
       <CtaCarousel/>  
     </div>
   )

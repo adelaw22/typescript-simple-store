@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import {ShoppingCartIcon} from '@heroicons/react/24/outline'
+import { productDataType } from '../utilities/productsData'
 // import ProductImg from '../assets/images/backpack.png'
 
 

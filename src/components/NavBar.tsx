@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className={`z-10 top-0  ${NavBg? 'sticky bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow' : ''}`}>
        <div className="container mx-auto flex justify-between h-16 py-4 items-center">
        
-        <span className='text-4xl font-bold text-gray-900'>Blcwr.</span>
+        <span className='text-3xl font-bold text-gray-900'>Blcwr.</span>
         
 
         <div className="flex justify-between items-center w-3/25">

@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
     <Navbar/>
-     <div className="container mx-auto">
+     
       <Outlet/>
-     </div>
+  
     </div>
   )
 }

@@ -13,7 +13,7 @@ import vans from '../assets/images/vans.png'
 import bag from '../assets/images/women-bag.png'
 
 
-interface productData{
+export interface productDataType{
   id: number;
   productName: string;
   price: string;
@@ -24,7 +24,7 @@ interface productData{
 
 
 
-const ProductData: productData[] =  [
+const ProductData: productDataType[] =  [
     {
       id: 0,
       productName: "Sansik Bag",
