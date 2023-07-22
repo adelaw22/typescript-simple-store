@@ -14,7 +14,7 @@ const CtaContent =({ctaData}: any)=> {
                 <p className='text-xl'>{ctaData.details}</p>
                 <h1 className='text-5xl font-bold'>{ctaData.headline}.</h1>
                 <Link to='/shop'>
-                    <CustomBtn btnStyle='mt-4'>Shop now</CustomBtn>
+                    <CustomBtn btnStyle='mt-4 px-16 py-3'>Shop now</CustomBtn>
                 </Link>
               
             </div>

@@ -16,7 +16,7 @@ const ProductPage = () => {
               <p className='text-base text-gray-900 mb-16'>Price:<b> $200.00</b></p>
       
 
-          <CustomBtn>Add to Cart</CustomBtn>
+          <CustomBtn btnStyle='px-16 py-3'>Add to Cart</CustomBtn>
         </div>
       </div>
     </div>
