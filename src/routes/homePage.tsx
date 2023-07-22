@@ -4,7 +4,11 @@ import CtaCarousel from '../components/cta/ctaCarousel'
 const HomePage =()=> {
   return (
     <div className=''>
-      <CtaCarousel/>  
+      <CtaCarousel/>
+
+      <div className='container mx-auto my-6'>
+       
+      </div>  
     </div>
   )
 }

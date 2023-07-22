@@ -6,8 +6,9 @@ function App() {
  
   return (
     <div className="App">
-    <Navbar/>
-     
+      <Navbar/>
+      
+      {/* Outlet to other pages */}
       <Outlet/>
   
     </div>

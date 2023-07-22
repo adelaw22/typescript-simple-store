@@ -2,31 +2,31 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import {ShoppingCartIcon} from '@heroicons/react/24/outline'
 import { productDataType } from '../utilities/productsData'
-// import ProductImg from '../assets/images/backpack.png'
+import ProductCard from './productCard'
 
 
 const ProductItem = ({productData}:any) => {
   return (
     <div className='w-full mb-9'>
-        <div className='w-full h-96 bg-gray-200 relative mb-4 cursor-pointer'>
-            <img className='w-4/5 m-auto absolute inset-0 transition duration-150 hover:scale-110 ' src={productData.img} alt="" />
-        </div>
+        <ProductCard productImg={productData.img} />
        
-            <div className='text-gray-700'>
-                <div className='flex justify-between items-center'>
-                    <NavLink to='/product'> 
-                        <p className="text-lg font-semibold hover:text-gray-900">{productData.productName}</p>
-                    </NavLink>
-                    <button className="w-8 h-8 hover:bg-gray-100 rounded-full ">
-                        <ShoppingCartIcon className="h-5 w-5 mx-auto"/>
-                    </button>
-                </div>
-                <p className='text-sm hover:text-gray-900 cursor-pointer'>{productData.price}</p>
+       
+        <div className='flex justify-between items-center text-gray-600 '>
+            <div className='hover:text-gray-950'>
+                <NavLink to='/product'> 
+                    <p className="text-lg font-semibold mb-2">{productData.productName}</p>
+                </NavLink>
+                <p className='text-sm cursor-pointer'>{productData.price}</p>
             </div>
+               
+            <button className="w-8 h-8 hover:bg-[#f0f0f0] hover:text-gray-900 rounded-full ">
+                <ShoppingCartIcon className="h-5 w-5 mx-auto"/>
+            </button>
+        </div>
+            
     </div>
+
   )
 }
 
 export default ProductItem
-
-// rgb(236,236,236)

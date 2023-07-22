@@ -6,7 +6,7 @@ const ProductPage = () => {
   return (
     <div className="container mx-auto">
       <div className='grid grid-cols-2 gap-8  mx-auto  '>
-        <div className='w-full h-120 bg-gray-200 relative  '>
+        <div className='w-full h-120 bg-[#f0f0f0] relative  '>
           <img className='w-2/5 m-auto absolute inset-0 transition duration-150 hover:scale-110' src={Joggers} alt=''/>
         </div>
         <div>
