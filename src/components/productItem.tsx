@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import {ShoppingCartIcon} from '@heroicons/react/24/outline'
-import { productDataType } from '../utilities/productsData'
+// import { productDataType } from '../utilities/productsData'
 import ProductCard from './productCard'
 
 
@@ -11,12 +11,12 @@ const ProductItem = ({productData}:any) => {
         <ProductCard productImg={productData.img} />
        
        
-        <div className='flex justify-between items-center text-gray-600 '>
-            <div className='hover:text-gray-950'>
+        <div className='flex justify-between items-center'>
+            <div>
                 <NavLink to='/product'> 
-                    <p className="text-lg font-semibold mb-2">{productData.productName}</p>
+                    <p className="font-bold mb-1 hover:text-gray-700 mb-2">{productData.productName}</p>
                 </NavLink>
-                <p className='text-sm cursor-pointer'>{productData.price}</p>
+                <p className='text-sm font-semibold text-gray-500'>{productData.price}</p>
             </div>
                
             <button className="w-8 h-8 hover:bg-[#f0f0f0] hover:text-gray-900 rounded-full ">
