@@ -13,8 +13,8 @@ interface ISectionTemp{
 
 const SectionTemp = ({sectionHeader, IndexOfFirstItem, lengthOfItems}: ISectionTemp) => {
   return (
-    <div className='mb-7.5'>
-        <div className='text-center mb-6'>
+    <div className='my-16'>
+        <div className='text-center mb-8'>
             <p className='text-2xl font-bold'>{sectionHeader}</p>
         </div>
         
