@@ -5,6 +5,14 @@ const DetailSection = () => {
   return (
     <div className='py-8'>
        <SectionTemp sectionHeader='Feature Products' IndexOfFirstItem={0} lengthOfItems={4} />
+
+       <div>
+        
+
+       </div>
+
+       <SectionTemp sectionHeader='New Products' IndexOfFirstItem={-4} />
+
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {ShoppingCartIcon} from '@heroicons/react/24/outline'
 // import { productDataType } from '../utilities/productsData'
 import ProductCard from './productCard'
@@ -13,9 +13,9 @@ const ProductItem = ({productData}:any) => {
        
         <div className='flex justify-between items-center'>
             <div>
-                <NavLink to='/product'> 
+                <Link to='/product'> 
                     <p className="font-bold mb-1 hover:text-gray-700 mb-2">{productData.productName}</p>
-                </NavLink>
+                </Link>
                 <p className='text-sm font-semibold text-gray-500'>{productData.price}</p>
             </div>
                
