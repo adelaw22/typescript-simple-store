@@ -6,16 +6,19 @@ import AdGlass from "../assets/images/adGlasses.png"
 import AdShirt from "../assets/images/adShirt.png"
 
 interface adType{
+  productItem: string;
   img: string;
   color: string;
 }
 
 const AdData: adType[] =[
   {
+    productItem:"Shirts",
     img:AdShirt,
     color:"#E3E4DF"
   },
   {
+    productItem:"Glasses",
     img:AdGlass,
     color:"#D7D7D9"
   }
