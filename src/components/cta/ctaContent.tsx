@@ -10,7 +10,7 @@ const CtaContent =({ctaData}: any)=> {
       <div className='container mx-auto'>
           <div className='grid grid-cols-2'>
            
-              <div className='max-w-[85%] self-center'>
+              <div className='max-w-[85%] self-center justify-self-end'>
                 <p className='text-xl'>{ctaData.details}</p>
                 <h1 className='text-5xl font-bold'>{ctaData.headline}.</h1>
                 <Link to='/shop'>
