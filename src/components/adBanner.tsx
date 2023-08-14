@@ -19,7 +19,7 @@ const AdBanner = ({data}: any) => {
           </Link>
         </div>        
         <div>
-          <img className='' src={data.img}/>
+          <img className='drop-shadow-2xl' src={data.img}/>
         </div>
     </div>
   )
