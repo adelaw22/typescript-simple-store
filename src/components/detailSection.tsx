@@ -8,19 +8,16 @@ import AdShirt from "../assets/images/adShirt.png"
 interface adType{
   productItem: string;
   img: string;
-  color: string;
 }
 
 const AdData: adType[] =[
   {
     productItem:"Shirts",
     img:AdShirt,
-    color:"#E3E4DF"
   },
   {
     productItem:"Glasses",
     img:AdGlass,
-    color:"#D7D7D9"
   }
 ]
 
@@ -29,7 +26,7 @@ const DetailSection = () => {
     <>
        <SectionTemp sectionHeader='Feature Products' IndexOfFirstItem={0} lengthOfItems={4} />
 
-       <div className='flex justify-center w-full h-80 bg-gradient-to-r from-[#F1F1F1] to-[#E7E7E7]'>
+       <div className='flex justify-center w-full h-80 bg-gradient-to-r from-[#F1F1F1] to-[#E7E7E7] mb-8'>
         <div className='flex'>
            <div className='self-center absolute z-1 text-center'>
             <p className='font-bold text-2xl'>THE TRENDS FOR THE SEASON</p>
