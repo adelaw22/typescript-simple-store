@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PageContainer from '../PageContainer'
 import CustomBtn from '../customBtn'
+
 
 
 
 const CtaContent =({ctaData}: any)=> {
 
   return(  
-      <div className='container mx-auto'>
+      <PageContainer>
           <div className='grid grid-cols-2'>
            
               <div className='max-w-[85%] self-center justify-self-end'>
@@ -23,7 +25,7 @@ const CtaContent =({ctaData}: any)=> {
               <img src={ctaData.img} alt='' className='drop-shadow-2xl'/>
             </div>
           </div>
-      </div>
+      </PageContainer>
   )
 }
 

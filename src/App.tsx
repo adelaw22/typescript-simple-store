@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "./components/NavBar"
+import FooterSect from "./components/footerSect/footer"
 
 
 function App() {
@@ -10,6 +11,9 @@ function App() {
       
       {/* Outlet to other pages */}
       <Outlet/>
+
+      {/* Web footer */}
+      <FooterSect/>
   
     </div>
   )

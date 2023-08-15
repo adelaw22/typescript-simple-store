@@ -1,10 +1,11 @@
 import React from 'react'
 import CustomBtn from '../components/customBtn'
+import PageContainer from '../components/PageContainer'
 import Joggers from '../assets/images/fur-coat.png'
 
 const ProductPage = () => {
   return (
-    <div className="container mx-auto">
+    <PageContainer>
       <div className='grid grid-cols-2 gap-8  mx-auto  '>
         <div className='w-full h-120 bg-[#f0f0f0] relative  '>
           <img className='w-2/5 m-auto absolute inset-0 transition duration-150 hover:scale-110' src={Joggers} alt=''/>
@@ -19,7 +20,7 @@ const ProductPage = () => {
           <CustomBtn btnStyle='px-16 py-3'>Add to Cart</CustomBtn>
         </div>
       </div>
-    </div>
+    </PageContainer>
   )
 }
 

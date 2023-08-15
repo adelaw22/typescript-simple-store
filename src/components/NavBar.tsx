@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import PageContainer from './PageContainer';
 import { NavLink, Link } from "react-router-dom";
 import {MagnifyingGlassIcon, ShoppingBagIcon} from '@heroicons/react/24/outline'
 
@@ -27,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className={`z-10 top-0  ${NavBg? 'sticky bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow' : ''}`}>
-       <div className="container mx-auto flex justify-between h-16 py-4 items-center">
+       <PageContainer containerStyle="flex justify-between h-16 py-4 items-center">
        
        <Link to='/'>
           <span className='text-3xl font-bold text-gray-900'>Blcwr.</span>
@@ -48,7 +49,7 @@ const Navbar = () => {
           </span>
         </div>
        
-       </div>
+       </PageContainer>
     </nav>
   )
 }
