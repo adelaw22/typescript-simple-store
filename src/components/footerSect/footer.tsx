@@ -5,11 +5,9 @@ import { DevicePhoneMobileIcon, EnvelopeIcon } from '@heroicons/react/24/outline
 
 // component styles
 const FooterStyle = {
-  linkHeaderStyle: "text-xl font-bold mb-3" 
-}
+  linkHeaderStyle: "text-xl font-bold mb-3", 
+  iconStyle: "h-5 w-5 stroke-gray-700 stroke-2 me-2",
 
-const componentStyling = {
-  iconStyle: "h-5 w-5 stroke-gray-700 stroke-2 me-2" ,
 }
 
 // link of arrays Footer  
@@ -18,12 +16,12 @@ const infoLinks = ["About Us", "Blog", "Testimonials", "Events"]
 const serviceLinks = ["Brands list", "Orders", "Return & Exchange", "Fashion list"] 
 const contactsLinks = [
   {
-    icon :<DevicePhoneMobileIcon className={`${componentStyling.iconStyle}`}/> ,
+    icon :<DevicePhoneMobileIcon className={`${FooterStyle.iconStyle}`}/> ,
     content: "(+234)999-9999-999",
   },
 
   {
-    icon :<EnvelopeIcon className={`${componentStyling.iconStyle}`} /> ,
+    icon :<EnvelopeIcon className={`${FooterStyle.iconStyle}`} /> ,
     content: "JohnDoe@mail.com",
   }
 ]
