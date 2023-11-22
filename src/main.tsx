@@ -9,6 +9,7 @@ import App from './App'
 import HomePage from './routes/homePage';
 import ShopPage from "./routes/shopPage";
 import ProductPage from "./routes/productPage";
+import CartPage from "./routes/cart"
 
 import './index.css'
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: "product",
         element: <ProductPage/>,
       },
+      {
+        path:'cart',
+        element:<CartPage/>
+      }
     ],
   },
   

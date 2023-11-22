@@ -30,9 +30,9 @@ const Navbar = () => {
     <nav className={`z-10 top-0  ${NavBg? 'sticky bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow' : ''}`}>
        <PageContainer containerStyle="flex justify-between h-16 py-4 items-center">
        
-       <Link to='/'>
+       <NavLink to='/'>
           <span className='text-3xl font-bold text-gray-900'>Blcwr.</span>
-       </Link>
+       </NavLink>
         
 
         <div className="flex justify-between items-center w-3/25">
@@ -40,6 +40,7 @@ const Navbar = () => {
             <span className='px-2 hover:border-b-4 hover:border-gray-900 text-gray-700 font-semibold hover:text-gray-900 hover:font-bold transition ease-in-out delay-150'>Shop</span>
           </NavLink>
           <MagnifyingGlassIcon className={`${componentStyling.iconStyle}`} />
+          <NavLink to='/cart'>
           <span className="w-10 h-10 flex items-center p-1 cursor-pointer">
             <ShoppingBagIcon className={` relative left-1 ${componentStyling.iconStyle}`}/>
               <div className=" h-4 w-4  rounded-full bg-gray-900 text-white relative right-1 bottom-1.5 z-10 ">
@@ -47,6 +48,7 @@ const Navbar = () => {
               </div>
               
           </span>
+          </NavLink>
         </div>
        
        </PageContainer>

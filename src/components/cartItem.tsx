@@ -8,11 +8,11 @@ const cartItem = () => {
         </div>
 
         <div>
-            <p>NameOfProduct</p>
+            <p>Name Of Product</p>
 
             <div>
                 <button>-</button>
-                <p>1</p>
+                <span>1</span>
                 <button>+</button>
             </div>
         </div>

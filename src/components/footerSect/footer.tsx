@@ -48,7 +48,7 @@ const footerSect = () => {
 
               {
                 contactsLinks.map((item, i)=>(
-                  <div className='flex mb-3'>
+                  <div className='flex mb-3' key={i}>
                     {item.icon}
                     <p className='text-base font-normal'>{item.content}</p>
                   </div>
