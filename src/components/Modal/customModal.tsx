@@ -1,19 +1,25 @@
 import React from 'react'
-import { ComponentProps } from '../../types/global'
+import ReactPortal from '../ReactPortal'
+// import { ComponentProps } from '../../types/global'
 
-const componentStyles ={
-  hrStyle: "border-t-1 border-t-neutral-400",
+interface ModalProps{
+  title?: string;
+  isOpen: boolean;
+  onClose: ()=> void;
+  children: React.ReactNode;
+
 }
 
-const CustomModal=({title, children}:ComponentProps)=> {
+const CustomModal=({title, isOpen, children}:ModalProps)=> {
   return (
-    <div  className="fixed inset-0 flex items-center justify-center z-50">
+    <ReactPortal wrapperId="react-portal-modal-container">
+      <div  className="fixed inset-0 flex items-center justify-center z-50">
       <div className="bg-white border rounded shadow-lg p-4">
          <h3>{title}</h3>
-         <hr className={componentStyles.hrStyle}/>
          {children}
         </div>
-    </div>
+      </div>
+    </ReactPortal>
   )
 }
 
