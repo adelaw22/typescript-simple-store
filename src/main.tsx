@@ -10,7 +10,6 @@ import HomePage from './routes/homePage';
 import ShopPage from "./routes/shopPage";
 import ProductPage from "./routes/productPage";
 import CartPage from "./routes/cart"
-
 import './index.css'
 
 const router = createBrowserRouter([
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
         element: <HomePage/>,
       },
       {
-        path: "/shop",
+        path: "shop",
         element: <ShopPage/>,
       },
       {

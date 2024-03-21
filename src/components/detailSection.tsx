@@ -26,7 +26,7 @@ const DetailSection = () => {
     <>
        <SectionTemp sectionHeader='Feature Products' IndexOfFirstItem={0} lengthOfItems={4} />
 
-       <div className='flex justify-center w-full h-80 bg-gradient-to-r from-[#F1F1F1] to-[#E7E7E7] mb-8'>
+       <div className='flex justify-center w-full h-80 bg-gradient-to-r from-[#F1F1F1] to-[#E7E7E7] my-[6rem]'>
         <div className='flex'>
            <div className='self-center absolute z-1 text-center'>
             <p className='font-bold text-2xl'>THE TRENDS FOR THE SEASON</p>
@@ -34,7 +34,8 @@ const DetailSection = () => {
             <img className='relative text-center opacity-40 drop-shadow-2xl' src={ladyimg} alt=""/>
         </div>
        </div>
-       <div className='grid gap-8 grid-cols-2'>
+       <SectionTemp sectionHeader='New Products' IndexOfFirstItem={-4} />
+       <div className='grid gap-8 grid-cols-2 my-[6rem]'>
         {
           AdData.map((item: adType,i)=>(
             <AdBanner key={i} data={item}/>
@@ -42,9 +43,6 @@ const DetailSection = () => {
         }
           
        </div>
-
-       <SectionTemp sectionHeader='New Products' IndexOfFirstItem={-4} />
-
     </>
   )
 }
