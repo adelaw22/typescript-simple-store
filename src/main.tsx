@@ -11,6 +11,8 @@ import ShopPage from "./routes/shopPage";
 import ProductPage from "./routes/productPage";
 import CartPage from "./routes/cart"
 import './index.css'
+import { store } from './store'
+import { Provider } from 'react-redux';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )
