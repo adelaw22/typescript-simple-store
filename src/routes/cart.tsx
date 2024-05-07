@@ -1,6 +1,6 @@
 import React from 'react'
 import PageContainer from '../components/PageContainer'
-import CartItem from '../components/cartItem'
+import CartItem from '../components/Cart/cartItem'
 import CustomBtn from '../components/customBtn'
 
 const componentStyles ={
