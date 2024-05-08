@@ -15,6 +15,8 @@ const shopCart = () => {
             <p className="text-xl font-bold">Shopping cart</p>
             <p>0 item</p>
           </div>
+
+          <div></div>
         </div>
 
         <hr className={componentStyles.hrStyle}/>

@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"
 
 export function useNavbar(){
-    const [NavBg, setNavBg] =useState<boolean>(false)
+    const [NavBgPosition, setNavBgPosition] =useState<boolean>(false)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     
     const changeBg =()=>{
         if (window.scrollY >= 100){
-            setNavBg(true)
+            setNavBgPosition(true)
         }else{ 
-        setNavBg(false)
+        setNavBgPosition(false)
         }
     }
 
@@ -16,5 +17,5 @@ export function useNavbar(){
         window.addEventListener("scroll", changeBg)
     })
 
-    return{NavBg}
+    return{NavBgPosition, isOpen, setIsOpen}
 }

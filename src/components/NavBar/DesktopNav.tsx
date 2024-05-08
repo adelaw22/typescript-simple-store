@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
 import PageContainer from '../PageContainer';
 import { NavLink, Link } from "react-router-dom";
 import { ShoppingBagIcon} from '@heroicons/react/24/outline'
 import { useNavbar } from '../../hooks/useNavbar';
+import { useEffect } from 'react';
 
 const componentStyling = {
     //Icon
@@ -11,10 +11,19 @@ const componentStyling = {
     menuStyle: 'px-2 hover:border-b-4 hover:border-gray-900 text-gray-700 font-semibold hover:text-gray-900 hover:font-bold transition ease-in-out delay-150'
   }
 
+  interface DesktopProps{
+    NavBgPosition: boolean;
+    isOpen: boolean;
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>; // Add this line
+  }
 
+const DesktopNav = ({NavBgPosition, setIsOpen}:DesktopProps) => {
+  
 
-const Navbar = () => {
-  const {NavBg} = useNavbar()
+    const showModal = ()=>{
+        setIsOpen(true)
+    }
+ 
 
   const menuItem = [
     {
@@ -36,7 +45,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className={`z-10 top-0  ${NavBg? 'sticky bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow' : 'bg-[#E9EAEB]'}`}>
+    <nav className={`z-10 top-0  ${NavBgPosition? 'sticky bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow' : 'bg-[#E9EAEB]'}`}>
        <PageContainer containerStyle="flex justify-between h-16 py-4 items-center">
        
        <NavLink to='/'>
@@ -51,15 +60,13 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          <NavLink to='/cart'>
-          <span className="w-10 h-10 flex items-center p-1 cursor-pointer">
+          <span onClick={showModal} className="w-10 h-10 flex items-center p-1 cursor-pointer">
             <ShoppingBagIcon className={`relative left-1 ${componentStyling.iconStyle}`}/>
               <div className=" h-4 w-4  rounded-full bg-gray-900 text-white relative right-1 bottom-1.5 z-10 ">
                 <p className='text-xs text-center'>0</p>
               </div>
               
           </span>
-          </NavLink>
         </div>
        
        </PageContainer>
@@ -67,5 +74,5 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;
+export default DesktopNav;
 
