@@ -13,12 +13,10 @@ const componentStyling = {
 
   interface DesktopProps{
     NavBgPosition: boolean;
-    isOpen: boolean;
-    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>; // Add this line
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   }
 
 const DesktopNav = ({NavBgPosition, setIsOpen}:DesktopProps) => {
-  
 
     const showModal = ()=>{
         setIsOpen(true)

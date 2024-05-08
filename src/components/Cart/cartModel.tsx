@@ -18,7 +18,7 @@ interface CartModalProps{
 
 const CartModal=({ isOpen, setIsOpen }:CartModalProps)=> {
 
-  console.log(isOpen)
+  
   const closeModal = ()=>{
     setIsOpen(false)
 }

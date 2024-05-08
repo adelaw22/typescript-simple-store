@@ -17,5 +17,6 @@ export function useNavbar(){
         window.addEventListener("scroll", changeBg)
     })
 
+    
     return{NavBgPosition, isOpen, setIsOpen}
 }

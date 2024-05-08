@@ -20,7 +20,7 @@ const ResponsiveComponent: React.FC = () => {
       {isMobile ? (
         <p>This is a mobile view</p>
       ) : (
-        <DesktopNav NavBgPosition={NavBgPosition} isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <DesktopNav NavBgPosition={NavBgPosition} setIsOpen={setIsOpen}/>
       )}
       <CartModal isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
