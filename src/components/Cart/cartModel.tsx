@@ -8,8 +8,8 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 // interface CartModalProps{
 //   title?: string;
 // }
-const componentStyles ={
-  hrStyle: "border-t-1 border-t-[#DADBE6] ",
+ export const componentStyles ={
+  hrStyle: "border-t-1 border-t-[#DADBE6] my-5",
 }
 
 interface CartModalProps{
@@ -29,7 +29,7 @@ const CartModal=({ isOpen, setIsOpen }:CartModalProps)=> {
     {isOpen &&
         <> 
           <div  className="fixed inset-0 flex  justify-end z-50">
-            <div className="bg-white h-screen w-2/5 px-5">
+            <div className="bg-white h-screen w-2/5 p-5 ">
               <div className='flex justify-between'>
                   <div>
                     <p className="text-xl font-bold">Shopping cart</p>
@@ -46,8 +46,8 @@ const CartModal=({ isOpen, setIsOpen }:CartModalProps)=> {
 
                   <div className='position-sticky bottom-0'>
                       <div className='flex justify-between'>
-                        <p>Total:</p>
-                        <p></p>
+                        <p>Total :</p>
+                        <p className='font-bold'>$200.00</p>
                       </div>
                       <CustomBtn>Checkout</CustomBtn>
                   </div>
