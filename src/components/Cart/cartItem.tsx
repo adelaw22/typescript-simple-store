@@ -7,8 +7,8 @@ const cartItem = () => {
     <>
         <div className='flex'>
        <div className=' flex '>
-            <div className='bg-[#EBECF2] w-[9rem] p-3 rounded-md'>
-                <img src={BackPack} alt="" className='w-7/5 object-contain'/>
+            <div className='bg-[#EBECF2] w-[6rem] p-3 rounded-md'>
+                <img src={BackPack} alt="" className='w-full object-contain'/>
             </div>
 
             <div className="ml-4 flex flex-col pt-2">
