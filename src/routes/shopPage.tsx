@@ -1,19 +1,17 @@
-import React from 'react'
-import ProductItem from '../components/productItem'
-import ProductData, {productDataType} from '../utilities/productsData' 
+import React from 'react';
+import ProductItem from '../components/productItem';
+import ProductData from '../utilities/productsData';
 
-
-const ShopPage = () => {
+const ShopPage: React.FC = () => {
   return (
     <div className="container mx-auto">
-       <div className='grid gap-10 md:grid-cols-4'>
-        {ProductData.map((product:productDataType)=>(
-          <ProductItem key={product.id} productData={product}/>
-        ))} 
+      <div className="grid gap-10 md:grid-cols-4 py-28">
+        {ProductData.map((product) => (
+          <ProductItem key={product.id} productData={product} />
+        ))}
       </div>
     </div>
-   
-  )
-}
+  );
+};
 
-export default ShopPage
+export default ShopPage;

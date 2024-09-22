@@ -1,8 +1,10 @@
 import React from 'react'
-import ReactPortal from '../ReactPortal'
+import {useDispatch, useSelector} from 'react-redux'
+// import ReactPortal from '../ReactPortal'
 import CustomBtn from '../customBtn';
 import CartItem from './cartItem';
 import { useNavbar } from '../../hooks/useNavbar';
+import {CartState} from '../../utilities/slices/cartSlice'
 import { XMarkIcon } from '@heroicons/react/24/outline';
 
 export const componentStyles = {
@@ -15,6 +17,8 @@ interface CartModalProps {
 }
 
 const CartModal = ({ isOpen, setIsOpen }: CartModalProps) => {
+  const cartItems = useSelector((state: { cart: CartState }) => state.cart.cartItems);
+
 
   const closeModal = () => {
     setIsOpen(false)
@@ -40,7 +44,19 @@ const CartModal = ({ isOpen, setIsOpen }: CartModalProps) => {
 
               {/* Cart items */}
               <div className="flex-grow">
-                <CartItem />
+              {
+                cartItems.length > 0 ? (
+                  <>
+                    {
+                      cartItems.map((item)=>(
+                        <CartItem key={item.id} item={item}/>
+                      ))
+                    }
+                  </>
+                ):(
+                  <></>
+                )
+              }
               </div>
 
               <div className='mt-auto'>

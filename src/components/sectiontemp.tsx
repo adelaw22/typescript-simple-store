@@ -2,16 +2,21 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ProductCard from './productCard'
 import CustomBtn from './customBtn'
+import ProductData from '../utilities/productsData'
+import {productDataType, ISectionTemp} from '../types/global' 
+import { addToCart } from '../utilities/slices/cartSlice'
+import { useDispatch } from 'react-redux'
 
-import ProductData, {productDataType} from '../utilities/productsData' 
-
-interface ISectionTemp{
-    sectionHeader: string;
-    IndexOfFirstItem?: number;
-    lengthOfItems?: number;
-}
 
 const SectionTemp = ({sectionHeader, IndexOfFirstItem, lengthOfItems}: ISectionTemp) => {
+
+    const dispatch = useDispatch()
+
+    const handleAddToCart =()=>{
+        dispatch(addToCart({...item, quantity:1}))
+    }
+
+
   return (
     <div className='my-16'>
         <div className='text-center mb-8'>
@@ -29,7 +34,7 @@ const SectionTemp = ({sectionHeader, IndexOfFirstItem, lengthOfItems}: ISectionT
                                 </Link>
                                 <p className='text-sm font-semibold text-gray-500'>{product.price}</p>
 
-                                <CustomBtn btnStyle='py-2 px-5 text-sm mt-2'> Add to Cart </CustomBtn>
+                                <CustomBtn onClick={handleAddToCart} btnStyle='py-2 px-5 text-sm mt-2'> Add to Cart </CustomBtn>
                         </div>
                     </div>
                 ))

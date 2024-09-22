@@ -1,15 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-interface CustomBtnProps{
-    children?: React.ReactNode;
-    btnStyle?: string;
-    rest?: any;
+interface CustomBtnProps {
+  children?: React.ReactNode;
+  btnStyle?: string;
+  to?: string;
+  rest?: any;
 }
 
-const customBtn = ({btnStyle, children, ...rest}: CustomBtnProps) => {
+const CustomBtn = ({ btnStyle, children, to, ...rest }: CustomBtnProps) => {
+  const baseStyle = 'bg-neutral-900 hover:bg-neutral-700 text-neutral-50 text-base';
+
+  if (to) {
+    return (
+      <Link to={to}>
+        <button className={`${baseStyle} ${btnStyle}`} {...rest}>
+          {children}
+        </button>
+      </Link>
+    );
+  }
+
   return (
-    <button className={` bg-neutral-900 hover:bg-neutral-700 text-neutral-50 text-base ${btnStyle}`} {...rest}>{children}</button>
-  )
-}
+    <button className={`${baseStyle} ${btnStyle}`} {...rest}>
+      {children}
+    </button>
+  );
+};
 
-export default customBtn
+export default CustomBtn;

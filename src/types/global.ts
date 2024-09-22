@@ -6,8 +6,20 @@ export interface ComponentProps{
     style?: React.CSSProperties;
 } 
 
-export interface CartItem {
-    id: string;
-    quantity: number;
-    // Define other properties of your cart item here
+export interface productDataType{
+    id: number;
+    productName: string;
+    price: string;
+    description ?: string;
+    img: string;
   }
+
+export interface CartItem extends productDataType{
+    quantity: number;
+}
+
+export interface ISectionTemp{
+    sectionHeader: string;
+    IndexOfFirstItem?: number;
+    lengthOfItems?: number;
+}
