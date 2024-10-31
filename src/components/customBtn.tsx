@@ -5,10 +5,11 @@ interface CustomBtnProps {
   children?: React.ReactNode;
   btnStyle?: string;
   to?: string;
+  onClick?: () => void;
   rest?: any;
 }
 
-const CustomBtn = ({ btnStyle, children, to, ...rest }: CustomBtnProps) => {
+const CustomBtn = ({ btnStyle, children, to, onClick, ...rest }: CustomBtnProps) => {
   const baseStyle = 'bg-neutral-900 hover:bg-neutral-700 text-neutral-50 text-base';
 
   if (to) {
@@ -22,7 +23,7 @@ const CustomBtn = ({ btnStyle, children, to, ...rest }: CustomBtnProps) => {
   }
 
   return (
-    <button className={`${baseStyle} ${btnStyle}`} {...rest}>
+    <button className={`${baseStyle} ${btnStyle}`} onClick={onClick} {...rest}>
       {children}
     </button>
   );

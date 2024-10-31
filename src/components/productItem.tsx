@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { productDataType } from '../types/global';
 import ProductCard from './productCard';
+import { formatCurrency } from '../lib/currencyFormat';
 
 interface ProductItemProps {
   productData: productDataType;
@@ -18,7 +19,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ productData }) => {
           <Link to="/product">
             <p className="font-bold hover:text-gray-700 mb-2">{productData.productName}</p>
           </Link>
-          <p className="text-sm font-semibold text-gray-500">{productData.price}</p>
+          <p className="text-sm font-semibold text-gray-500">{formatCurrency(productData.price)}</p>
         </div>
 
         <button className="w-8 h-8 hover:bg-[#f0f0f0] hover:text-gray-900 rounded-full">

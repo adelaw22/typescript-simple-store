@@ -9,7 +9,7 @@ export interface ComponentProps{
 export interface productDataType{
     id: number;
     productName: string;
-    price: string;
+    price: number;
     description ?: string;
     img: string;
   }

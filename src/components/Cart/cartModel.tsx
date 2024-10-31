@@ -5,6 +5,7 @@ import CustomBtn from '../customBtn';
 import CartItem from './cartItem';
 import { useNavbar } from '../../hooks/useNavbar';
 import {CartState} from '../../utilities/slices/cartSlice'
+import { formatCurrency } from '../../lib/currencyFormat';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 
 export const componentStyles = {
@@ -19,6 +20,8 @@ interface CartModalProps {
 const CartModal = ({ isOpen, setIsOpen }: CartModalProps) => {
   const cartItems = useSelector((state: { cart: CartState }) => state.cart.cartItems);
 
+   // Calculate total price
+   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const closeModal = () => {
     setIsOpen(false)
@@ -47,11 +50,13 @@ const CartModal = ({ isOpen, setIsOpen }: CartModalProps) => {
               {
                 cartItems.length > 0 ? (
                   <>
-                    {
-                      cartItems.map((item)=>(
-                        <CartItem key={item.id} item={item}/>
+                    {cartItems.length > 0 ? (
+                      cartItems.map((item) => (
+                        <CartItem key={item.id} item={item} />
                       ))
-                    }
+                    ) : (
+                      <p>Your cart is empty</p>
+                    )}
                   </>
                 ):(
                   <></>
@@ -64,7 +69,7 @@ const CartModal = ({ isOpen, setIsOpen }: CartModalProps) => {
 
                 <div className='flex justify-between'>
                   <p>Total :</p>
-                  <p className='font-bold'>$200.00</p>
+                  <p className='font-bold'>{formatCurrency(totalPrice)}</p>
                 </div>
                 <CustomBtn btnStyle='mt-5 px-16 py-3 mx-auto block'>Checkout</CustomBtn>
               </div>

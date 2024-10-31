@@ -6,13 +6,14 @@ import ProductData from '../utilities/productsData'
 import {productDataType, ISectionTemp} from '../types/global' 
 import { addToCart } from '../utilities/slices/cartSlice'
 import { useDispatch } from 'react-redux'
+import { formatCurrency } from '../lib/currencyFormat'
 
 
 const SectionTemp = ({sectionHeader, IndexOfFirstItem, lengthOfItems}: ISectionTemp) => {
 
     const dispatch = useDispatch()
 
-    const handleAddToCart =()=>{
+    const handleAddToCart =(item : productDataType)=>{
         dispatch(addToCart({...item, quantity:1}))
     }
 
@@ -32,9 +33,9 @@ const SectionTemp = ({sectionHeader, IndexOfFirstItem, lengthOfItems}: ISectionT
                                 <Link to="/product">
                                   <p className='font-bold mb-1 hover:text-gray-700'>{product.productName}</p>
                                 </Link>
-                                <p className='text-sm font-semibold text-gray-500'>{product.price}</p>
+                                <p className='text-sm font-semibold text-gray-500'>{formatCurrency(product.price)}</p>
 
-                                <CustomBtn onClick={handleAddToCart} btnStyle='py-2 px-5 text-sm mt-2'> Add to Cart </CustomBtn>
+                                <CustomBtn onClick={()=>handleAddToCart(product)} btnStyle='py-2 px-5 text-sm mt-2'> Add to Cart </CustomBtn>
                         </div>
                     </div>
                 ))
