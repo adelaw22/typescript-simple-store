@@ -9,7 +9,6 @@ import App from './App'
 import HomePage from './routes/homePage';
 import ShopPage from "./routes/shopPage";
 import ProductPage from "./routes/productPage";
-import CartPage from "./routes/cart"
 import './index.css'
 import { store } from './store'
 import { Provider } from 'react-redux';
@@ -30,10 +29,6 @@ const router = createBrowserRouter([
       {
         path: "product",
         element: <ProductPage/>,
-      },
-      {
-        path:'cart',
-        element:<CartPage/>
       }
     ],
   },

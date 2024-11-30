@@ -3,10 +3,10 @@ import {useDispatch, useSelector} from 'react-redux'
 // import ReactPortal from '../ReactPortal'
 import CustomBtn from '../customBtn';
 import CartItem from './cartItem';
-import { useNavbar } from '../../hooks/useNavbar';
 import {CartState} from '../../utilities/slices/cartSlice'
 import { formatCurrency } from '../../lib/currencyFormat';
 import { XMarkIcon } from '@heroicons/react/24/outline';
+import EmptyCart from './emptyCart';
 
 export const componentStyles = {
   hrStyle: "border-t-1 border-t-[#DADBE6] my-5",
@@ -46,27 +46,17 @@ const CartModal = ({ isOpen, setIsOpen }: CartModalProps) => {
               <hr className={componentStyles.hrStyle} />
 
               {/* Cart items */}
-              <div className="flex-grow">
-              {
-                cartItems.length > 0 ? (
-                  <>
+              <div className="flex-grow overflow-auto">
                     {cartItems.length > 0 ? (
                       cartItems.map((item) => (
                         <CartItem key={item.id} item={item} />
                       ))
                     ) : (
-                      <p>Your cart is empty</p>
+                      <EmptyCart />
                     )}
-                  </>
-                ):(
-                  <></>
-                )
-              }
               </div>
 
-              <div className='mt-auto'>
-                <hr className={componentStyles.hrStyle} />
-
+              <div className='mt-5'>
                 <div className='flex justify-between'>
                   <p>Total :</p>
                   <p className='font-bold'>{formatCurrency(totalPrice)}</p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrashIcon } from '@heroicons/react/24/outline';
+import { TrashIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline';
 import BackPack from "../../assets/images/backpack.png"; // Replace with dynamic image if needed
 import { componentStyles } from './cartModel';
 import CustomBtn from '../customBtn';
@@ -41,9 +41,13 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
             <p className='font-semibold text-[18px]'>{item.productName}</p>
 
             <div className='mt-2 flex items-center'>
-              <CustomBtn onClick={handleDecrement}>-</CustomBtn>
+              <CustomBtn onClick={handleDecrement} btnStyle='p-1 rounded '>
+                <MinusIcon className='h-3 w-3 stroke-2' />
+              </CustomBtn>
               <span className='mx-3'>{item.quantity}</span>
-              <CustomBtn onClick={handleIncrement}>+</CustomBtn>
+              <CustomBtn onClick={handleIncrement} btnStyle='p-1 rounded' >
+                <PlusIcon className=' h-3 w-3 stroke-2'  />
+              </CustomBtn>
             </div>
           </div>
         </div>
