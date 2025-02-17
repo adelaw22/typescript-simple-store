@@ -1,5 +1,5 @@
 import React from 'react'
-import PageContainer from '../PageContainer'
+import PageContainer from '../pageContainer'
 import FooterLink from './footerLink'
 import { DevicePhoneMobileIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 

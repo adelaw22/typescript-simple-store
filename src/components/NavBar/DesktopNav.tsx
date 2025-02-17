@@ -1,4 +1,4 @@
-import PageContainer from '../PageContainer';
+import PageContainer from '../pageContainer';
 import { NavLink, Link } from "react-router-dom";
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import { useSelector } from 'react-redux';
