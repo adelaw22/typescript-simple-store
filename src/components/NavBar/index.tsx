@@ -1,7 +1,7 @@
 import { useNavbar } from "../../hooks/useNavbar";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import CartModal from "../Cart/cartModel";
-import DesktopNav from "./DesktopNav";
+import DesktopNav from "./desktopNav";
 interface WindowSize {
   width: number;
   height: number;

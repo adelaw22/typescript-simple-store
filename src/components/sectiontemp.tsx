@@ -7,6 +7,7 @@ import {productDataType, ISectionTemp} from '../types/global'
 import { addToCart } from '../utilities/slices/cartSlice'
 import { useDispatch } from 'react-redux'
 import { formatCurrency } from '../lib/currencyFormat'
+import { setSelectedProduct } from '../utilities/slices/productSlice'
 
 
 const SectionTemp = ({sectionHeader, IndexOfFirstItem, lengthOfItems}: ISectionTemp) => {
@@ -30,7 +31,7 @@ const SectionTemp = ({sectionHeader, IndexOfFirstItem, lengthOfItems}: ISectionT
                     <div key={product.id}>
                         <ProductCard productImg={product.img}/>
                         <div className='text-center'>
-                                <Link to="/product">
+                                <Link  to={`/product/${product.id}`} onClick={() => dispatch(setSelectedProduct(product))}>
                                   <p className='font-bold mb-1 hover:text-gray-700'>{product.productName}</p>
                                 </Link>
                                 <p className='text-sm font-semibold text-gray-500'>{formatCurrency(product.price)}</p>
