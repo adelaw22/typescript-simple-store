@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "./components/NavBar"
 import FooterSect from "./components/footerSect/footer"
-
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
  
@@ -14,7 +14,7 @@ function App() {
 
       {/* Web footer */}
       <FooterSect/>
-
+    <Analytics/>
     </div>
   )
 }
