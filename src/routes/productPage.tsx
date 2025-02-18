@@ -7,7 +7,6 @@ import { productDataType } from '../types/global'
 import { formatCurrency } from '../lib/currencyFormat'
 import BackButton from '../components/BackButton'
 
-
 const ProductPage = () => {
   const product :productDataType  = useSelector((state: any) => state.product.selectedProduct)
   const dispatch = useDispatch()
