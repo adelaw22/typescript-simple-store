@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PageContainer from '../pageContainer'
+import PageContainer from '../PageContainer'
 import CustomBtn from '../customBtn'
 
 

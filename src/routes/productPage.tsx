@@ -1,11 +1,11 @@
 import React from 'react'
 import CustomBtn from '../components/customBtn'
-import PageContainer from '../components/pageContainer'
+import PageContainer from '../components/PageContainer'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../utilities/slices/cartSlice'
 import { productDataType } from '../types/global'
 import { formatCurrency } from '../lib/currencyFormat'
-import BackButton from '../components/backButton'
+import BackButton from '../components/BackButton'
 
 
 const ProductPage = () => {
