@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../utilities/slices/cartSlice'
 import { productDataType } from '../types/global'
 import { formatCurrency } from '../lib/currencyFormat'
-import BackButton from '../components/BackButton'
+import BackBtn from '../components/backBtn'
 
 const ProductPage = () => {
   const product :productDataType  = useSelector((state: any) => state.product.selectedProduct)
@@ -18,7 +18,7 @@ const ProductPage = () => {
   return (
     <PageContainer>
       <div className='my-24'>
-        <BackButton />
+        <BackBtn/>
         <div className='grid grid-cols-2 gap-8 mt-5'>
           <div className='w-full h-120 bg-[#f0f0f0] relative  '>
             <img className='w-2/5 m-auto absolute inset-0 transition duration-150 hover:scale-110' src={product.img} alt=''/>
